@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/movieCard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="9dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+            android:background="?themePrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/poster"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    android:contentDescription="@string/movie_poster"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:roundedCornerRadius="6dp"
+                    app:viewAspectRatio="1.5" />
+
+                <View
+                    android:id="@+id/dark"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    android:alpha="0.2"
+                    android:background="@drawable/poster"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/play"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/play_trailer"
+                    android:background="@android:color/transparent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/movieTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:theme="@style/AppTheme.MovieTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/movieInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="@string/movie_info"
+                    android:theme="@style/AppTheme.MoreInfo"
+                    app:layout_constraintEnd_toStartOf="@+id/arrowDown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/movieTitle"
+                    tools:ignore="SmallSp" />
+
+                <ImageButton
+                    android:id="@+id/arrowDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="?themePrimary"
+                    app:layout_constraintStart_toEndOf="@+id/movieInfo"
+                    app:layout_constraintTop_toBottomOf="@+id/movieTitle"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    tools:ignore="VectorDrawableCompat"
+                    android:contentDescription="@string/arrow" />
+
+                <TextView
+                    android:id="@+id/cinemaName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:theme="@style/AppTheme.CinemaNameLanguageMovie"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/separatorOfMovieLanguageMovieCinemaName"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/movieLanguage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:theme="@style/AppTheme.CinemaNameLanguageMovie"
+                    app:layout_constraintEnd_toStartOf="@id/movieRating"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/separatorOfMovieInfoMovieLanguage"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/movieRating"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:layout_height="23dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/rated_style"
+                    android:theme="@style/AppTheme.MovieRated"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toTopOf="@id/separatorOfMovieLanguageMovieCinemaName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/movieLanguage"
+                    app:layout_constraintTop_toBottomOf="@id/separatorOfMovieInfoMovieLanguage"
+                    />
+
+                <View
+                    android:id="@+id/separatorOfMovieInfoMovieLanguage"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="?themeContentTextColoOnPrimaryVariant"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/movieInfo"
+                    android:layout_marginTop="20dp" />
+
+                <View
+                    android:id="@+id/separatorOfMovieLanguageMovieCinemaName"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="?themeContentTextColoOnPrimaryVariant"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/movieLanguage"
+                    android:layout_marginTop="9dp" />
+
+                <View
+                    android:id="@+id/separatorOfCinemaNameMovieHour"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="?themeContentTextColoOnPrimaryVariant"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cinemaName"
+                    android:layout_marginTop="11dp" />
+
+                <TextView
+                    android:id="@+id/movieHour"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:theme="@style/AppTheme.MovieHour"
+                    android:background="@drawable/start_style"
+                    app:layout_constraintEnd_toStartOf="@+id/timeLeft"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/separatorOfCinemaNameMovieHour" />
+
+                <View
+                    android:id="@+id/timeLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@drawable/timeleft_style"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/movieHour"
+                    app:layout_constraintTop_toBottomOf="@id/separatorOfCinemaNameMovieHour" />
+
+                <TextView
+                    android:id="@+id/startIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/separatorOfCinemaNameMovieHour"
+                    app:layout_constraintStart_toStartOf="@id/timeLeft"
+                    app:layout_constraintEnd_toEndOf="@id/timeLeft"
+                    android:layout_marginTop="15dp"
+                    android:textSize="10.5sp"
+                    tools:ignore="SmallSp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

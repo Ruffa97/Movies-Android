@@ -1,0 +1,80 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="themePrimary">@color/colorPrimary</item>
+        <item name="themePrimaryDark">@color/colorPrimaryDark</item>
+        <item name="themeContentTextColor">@color/colorSecondary</item>
+        <item name="themeContentTextColoOnPrimary">@color/white</item>
+        <item name="themeContentTextColoOnPrimaryVariant">@color/light_gray</item>
+        <item name="themeContentTextColoOnSecondary">@color/red</item>
+        <item name="statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?statusBarColor</item>
+        <item name="fontFamily">@font/latoregular</item>
+    </style>
+    <style name="SplashScreen" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="AppTheme.Title" >
+        <item name="android:textSize">@dimen/medium_font</item>
+    </style>
+    <style name="AppTheme.NoMovieMessage">
+        <item name="android:textColor">?themePrimaryDark</item>
+        <item name="android:textSize">@dimen/big_font</item>
+    </style>
+    <style name="AppTheme.MovieTitle">
+        <item name="android:textSize">@dimen/medium_font</item>
+        <item name="android:textColor">?themeContentTextColor</item>
+    </style>
+    <style name="AppTheme.MoreInfo">
+        <item name="android:textColor">?themeContentTextColoOnSecondary</item>
+        <item name="android:textSize">@dimen/small_font</item>
+    </style>
+    <style name="AppTheme.CinemaNameLanguageMovie">
+        <item name="android:textSize">@dimen/small_font</item>
+        <item name="android:textColor">?themePrimaryDark</item>
+    </style>
+    <style name="AppTheme.MovieRated">
+        <item name="fontFamily">@font/latobold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="AppTheme.Separator">
+        <item name="background">@color/black</item>
+    </style>
+    <style name="AppTheme.MovieHour">
+        <item name="android:textSize">@dimen/small_font</item>
+        <item name="android:textColor">?themeContentTextColoOnPrimaryVariant</item>
+    </style>
+    <style name="AppTheme.Apply">
+        <item name="android:textSize">@dimen/big_font</item>
+        <item name="android:textColor">?themeContentTextColoOnPrimaryVariant</item>
+    </style>
+    <style name="AppTheme.message">
+        <item name="android:textColor">?themeContentTextColoOnPrimaryVariant</item>
+        <item name="android:textSize">@dimen/big_font</item>
+    </style>
+    <style name="AppTheme.TimePickerMessage">
+        <item name="android:textColor">?themeContentTextColoOnSecondary</item>
+        <item name="android:textSize">@dimen/medium_font</item>
+    </style>
+    <style name="AppTheme.TrailerActionBarTitle">
+        <item name="android:textSize">@dimen/medium_font</item>
+        <item name="android:textColor">?themePrimaryDark</item>
+    </style>
+    <style name="AppTheme.MovieInfoType">
+        <item name="android:textSize">@dimen/small_font</item>
+        <item name="android:textColor">?themePrimaryDark</item>
+    </style>
+    <style name="AppTheme.MovieInfo">
+        <item name="android:textSize">@dimen/medium_font</item>
+        <item name="android:textColor">?themePrimaryDark</item>
+    </style>
+    <style name="NumberPicker" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="android:textSize">55sp</item>
+        <item name="android:textColorPrimary">@color/red</item>
+        <item name="android:fontFamily">@font/latoregular</item>
+        <item name="fontWeight">50</item>
+    </style>
+</resources>
